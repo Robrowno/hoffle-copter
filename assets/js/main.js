@@ -133,7 +133,9 @@ scene("gameplay", async (levelName) => {
         plane.destroy();
     });
 
-    onCollide("heli", "copper", (copper) => {
+    // check collision between heli and copper
+    
+    onCollide("copper", "heli", (copper) => {
         play("coin");
         destroy(copper);
     });
@@ -188,6 +190,7 @@ scene("gameplay", async (levelName) => {
     if (levelName['levelName'] === 'city') {
 
         music = play("level1Music", {
+            volume: 0.50,
             loop: true
         })
     }
@@ -200,6 +203,7 @@ scene("gameplay", async (levelName) => {
         ]);
 
         music = play("level2Music", {
+            volume: 0.50,
             loop: true
         })
     }
@@ -208,6 +212,7 @@ scene("gameplay", async (levelName) => {
     if (levelName['levelName'] === 'beach') {
         
         music = play("level3Music", {
+            volume: 0.50,
             loop: true
         })
     }
@@ -216,6 +221,7 @@ scene("gameplay", async (levelName) => {
     if (levelName['levelName'] === 'boss') {
         
         music = play("bossMusic", {
+            volume: 0.50,
             loop: true
         })
     }
@@ -425,6 +431,7 @@ scene("titleScreen", async () => {
     ]);
 
     music = play("titleScreenMusic", {
+        volume: 0.50,
         loop: true
     })
 
@@ -468,6 +475,7 @@ scene("levelComplete", async (currentLevel) => {
     ]);
 
     music = play("levelCompleteMusic", {
+        volume: 0.50,
         loop: false
     })
 
@@ -501,6 +509,7 @@ scene("intro", async () => {
     ]);
 
     music = play("introMusic", {
+        volume: 0.50,
         loop: true
     })
 
